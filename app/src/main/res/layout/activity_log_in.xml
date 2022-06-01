@@ -11,6 +11,7 @@
         android:id="@+id/signin"
         android:layout_width="232dp"
         android:layout_height="89dp"
+        android:fontFamily="@font/akronim"
         android:text="Sign Up"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
@@ -49,7 +50,7 @@
         android:layout_height="60dp"
         android:ems="10"
         android:background="@drawable/edit_text_bg"
-        android:inputType="textPassword"
+        android:inputType="textVisiblePassword"
         android:text="Password"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
@@ -71,7 +72,7 @@
         android:drawableLeft="@drawable/ic_baseline_info_24"
         android:drawablePadding="20dp"
         android:ems="10"
-        android:inputType="textPassword"
+        android:inputType="textVisiblePassword"
         android:text="Confirm Password"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
@@ -82,6 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.087" />
+
 
     <Button
         android:id="@+id/loginbutton"
@@ -130,13 +132,16 @@
         android:id="@+id/google"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:backgroundTint="@color/white"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toEndOf="@+id/apple"
+        app:layout_constraintTop_toBottomOf="@+id/loginbutton"
+        app:layout_constraintVertical_bias="0.44"
         app:srcCompat="@drawable/google" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

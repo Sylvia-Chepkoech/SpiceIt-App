@@ -38,6 +38,6 @@ public class MealTypeAdapter extends ArrayAdapter<MealCourse> {
 
 
 
-        return super.getView(position, convertView, parent);
+        return convertView;
     }
 }
