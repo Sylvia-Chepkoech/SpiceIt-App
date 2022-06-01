@@ -2,6 +2,7 @@ package com.example.spiceit_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,19 +28,27 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     }
             @Override
             public void onClick(View v) {
+                login();
+                String user = mPersonName.getText().toString();
+                Intent intent = new Intent(LogInActivity.this, MealCourseActivity.class);
+                intent.putExtra("name", user);
+
+                startActivity(intent);
+
 
 
 
         };
     public void login () {
-//        String user = mPersonName.getText().toString().trim();
         String pass = mPassword.getText().toString().trim();
         String confrim = mConfirmPass.getText().toString().trim();
-        if(pass.equals("spiceitapp" ) && confrim.equals("spiceitapp"));
+        if(pass.equals("spiceitapp" ) && confrim.equals("spiceitapp"))
         {
             Toast.makeText(this, "Passwords matched!", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(this, "Passwords did not match", Toast.LENGTH_SHORT).show();
-        }
+
     }
+
+}
 }
