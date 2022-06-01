@@ -20,6 +20,7 @@
             android:orientation="horizontal">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/mealimage"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
