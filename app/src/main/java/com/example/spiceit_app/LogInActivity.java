@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,6 +29,17 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
             public void onClick(View v) {
 
 
+
         };
+    public void login () {
+//        String user = mPersonName.getText().toString().trim();
+        String pass = mPassword.getText().toString().trim();
+        String confrim = mConfirmPass.getText().toString().trim();
+        if(pass.equals("spiceitapp" ) && confrim.equals("spiceitapp"));
+        {
+            Toast.makeText(this, "Passwords matched!", Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(this, "Passwords did not match", Toast.LENGTH_SHORT).show();
+        }
     }
 }
