@@ -30,7 +30,7 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
             public void onClick(View v) {
                 login();
                 String user = mPersonName.getText().toString();
-                Intent intent = new Intent(LogInActivity.this, MealCourseActivity.class);
+                Intent intent = new Intent(LogInActivity.this, MainActivity.class);
                 intent.putExtra("name", user);
 
                 startActivity(intent);
