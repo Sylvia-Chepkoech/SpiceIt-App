@@ -10,6 +10,7 @@
         android:layout_marginTop="16dp">
 
         <LinearLayout
+            android:id="@+id/meals"
             android:layout_width="399dp"
             android:layout_height="80dp"
             android:layout_alignParentTop="true"
@@ -44,8 +45,17 @@
                 android:textSize="35sp"
                 android:textStyle="italic" />
 
+
+
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/recipe_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meals"
+            android:textSize="20sp"
+            android:visibility="gone"/>
 
     </RelativeLayout>
 

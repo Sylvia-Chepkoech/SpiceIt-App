@@ -22,7 +22,7 @@ public class RecipesActivity extends AppCompatActivity {
 
         if (intent != null){
             String course = intent.getStringExtra("mealtype");
-            String recipe = intent.getStringExtra("recipes");
+            String recipe = intent.getStringExtra("steps");
             int imageid = intent.getIntExtra("image", R.drawable.ic_baseline_fastfood_24);
 
             binding.course.setText(course);
