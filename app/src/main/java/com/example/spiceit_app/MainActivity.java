@@ -9,8 +9,15 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.example.spiceit_app.databinding.ActivityMainBinding;
+import com.example.spiceit_app.models.RandomCocktails;
+import com.example.spiceit_app.network.Api;
+import com.example.spiceit_app.network.ApiClient;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
@@ -28,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         MealTypeAdapter mealTypeAdapter = new MealTypeAdapter(course, imageId, MainActivity.this, title);
 
         binding.mealtypes.setAdapter(mealTypeAdapter);
@@ -42,6 +48,21 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("image", imageId[position]);
                 i.putExtra("steps", title[position]);
                 startActivity(i);
+
+                Api client = ApiClient.getClient();
+                Call<RandomCocktails> allCocktails = client.getCocktails('a');
+
+                allCocktails.enqueue(new Callback<RandomCocktails>() {
+                    @Override
+                    public void onResponse(Call<RandomCocktails> call, Response<RandomCocktails> response) {
+
+                    }
+
+                    @Override
+                    public void onFailure(Call<RandomCocktails> call, Throwable t) {
+
+                    }
+                });
 
             }
         });
