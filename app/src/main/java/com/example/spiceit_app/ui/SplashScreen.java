@@ -1,10 +1,12 @@
-package com.example.spiceit_app;
+package com.example.spiceit_app.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.example.spiceit_app.R;
 
 public class SplashScreen extends AppCompatActivity {
 

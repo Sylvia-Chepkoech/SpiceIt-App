@@ -1,10 +1,11 @@
-package com.example.spiceit_app;
+package com.example.spiceit_app.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.spiceit_app.R;
 import com.example.spiceit_app.databinding.ActivityMainBinding;
 import com.example.spiceit_app.databinding.ActivityRecipesBinding;
 

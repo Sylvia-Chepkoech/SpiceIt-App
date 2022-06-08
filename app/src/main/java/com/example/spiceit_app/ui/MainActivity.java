@@ -1,4 +1,4 @@
-package com.example.spiceit_app;
+package com.example.spiceit_app.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,12 +8,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.example.spiceit_app.databinding.ActivityMainBinding;
+import com.example.spiceit_app.MealTypeAdapter;
+import com.example.spiceit_app.R;
 import com.example.spiceit_app.models.RandomCocktails;
 import com.example.spiceit_app.network.Api;
 import com.example.spiceit_app.network.ApiClient;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,6 +22,7 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
+    List<RandomCocktails> allDrinks;
     private static final String TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -56,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<RandomCocktails> call, Response<RandomCocktails> response) {
 
+                        if(response.isSuccessful()){
+                            allDrinks = response.body().getDrinks();
+
+                            adp = new MealTypeAdapter(allDrinks, MainActivity.this)
+                        }
                     }
 
                     @Override
