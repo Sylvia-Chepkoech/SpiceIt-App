@@ -60,15 +60,15 @@ public class MealTypeAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.meal_item, null);
         }
 
-            ImageView imageView = convertView.findViewById(R.id.mealimage);
-        TextView course = convertView.findViewById(R.id.mealtype);
-        TextView recipesText = convertView.findViewById(R.id.recipe_item);
+//            ImageView imageView = convertView.findViewById(R.id.mealimage);
+//        TextView course = convertView.findViewById(R.id.mealtype);
+//        TextView recipesText = convertView.findViewById(R.id.recipe_item);
 
 
 
-        imageView.setImageResource(images[position]);
-        course.setText(foodType[position]);
-        recipesText.setText(recipes[position]);
+//        imageView.setImageResource(images[position]);
+//        course.setText(foodType[position]);
+//        recipesText.setText(recipes[position]);
 
 
 

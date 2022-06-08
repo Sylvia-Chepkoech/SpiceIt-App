@@ -1,5 +1,6 @@
 package com.example.spiceit_app.network;
 
+import com.example.spiceit_app.models.Drink;
 import com.example.spiceit_app.models.RandomCocktails;
 
 import retrofit2.Call;

@@ -1,13 +1,15 @@
 
 package com.example.spiceit_app.models;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 
-public class RandomCocktails {
+
+public class RandomCocktails implements Serializable {
 
     @SerializedName("drinks")
     @Expose

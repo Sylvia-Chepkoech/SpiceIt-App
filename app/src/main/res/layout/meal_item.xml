@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="100dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="126dp"
-        android:layout_marginTop="16dp">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/healthy"
+        app:layout_constraintTop_toBottomOf="@+id/cocktailName"
+        app:layout_constraintRight_toLeftOf="@id/cocktailCategory"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:adjustViewBounds="true"
+        android:id="@+id/cocktailImage"
+        />
 
-        <LinearLayout
-            android:id="@+id/meals"
-            android:layout_width="399dp"
-            android:layout_height="80dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginVertical="10dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginBottom="36dp"
-            android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cocktailName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/cocktailImage"
+        android:text="Cocktail Name"
+        android:fontFamily="@font/akronim"
+        app:layout_constraintBottom_toTopOf="@id/cocktailCategory"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="25dp"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/mealimage"
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:src="@drawable/appetizers" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cocktailCategory"
+        app:layout_constraintTop_toBottomOf="@+id/cocktailName"
+        android:paddingTop="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/cocktailImage"
+        app:layout_constraintRight_toLeftOf="@id/cocktailAlcoholic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Cocktail Category"
+        android:textSize="15dp"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:orientation="vertical">
-
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/mealtype"
-                android:layout_width="237dp"
-                android:layout_height="65dp"
-                android:text="Appetizers"
-                android:textColor="@color/black"
-                android:textSize="35sp"
-                android:textStyle="italic" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/cocktailAlcoholic"
+        app:layout_constraintTop_toBottomOf="@+id/cocktailName"
+        android:paddingTop="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/cocktailCategory"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Cocktail Alcoholic"
+        android:paddingLeft="8dp"
+        android:textSize="15dp"/>
 
 
 
-        </LinearLayout>
 
-        <TextView
-            android:id="@+id/recipe_item"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/meals"
-            android:textSize="20sp"
-            android:visibility="gone"/>
 
-    </RelativeLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

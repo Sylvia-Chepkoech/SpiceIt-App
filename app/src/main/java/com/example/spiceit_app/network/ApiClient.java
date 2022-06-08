@@ -1,5 +1,7 @@
 package com.example.spiceit_app.network;
 
+import com.example.spiceit_app.models.Constants;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -10,7 +12,7 @@ public class ApiClient {
         if (retrofit == null){
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl("COCKTAIL_BASE_URL")
+                    .baseUrl(Constants.COCKTAIL_BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
 

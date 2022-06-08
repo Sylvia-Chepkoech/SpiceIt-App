@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.CocktailFragment">
+
+<de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/meal_image"
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:src="@drawable/healthy" />
+
+<TextView
+    android:id="@+id/course"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/meal_image"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="10dp"
+    android:text="Cocktail Name"
+    android:textColor="@color/white" />
+
+<TextView
+    android:id="@+id/recipe"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/course"
+    android:layout_marginTop="3dp"
+    android:textColor="@color/white"
+    android:textSize="14dp"
+    android:text="Cocktail Glass"/>
+
+<TextView
+    android:id="@+id/instructions"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/recipe"
+    android:layout_marginTop="3dp"
+    android:textColor="@color/white"
+    android:textSize="14dp"
+    android:text="Instructions"/>
+
+<TextView
+    android:id="@+id/ingredients1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/instructions"
+    android:layout_marginTop="3dp"
+    android:textColor="@color/white"
+    android:textSize="14dp"
+    android:text="Ingredients"/>
+
+    <TextView
+        android:id="@+id/ingredients2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ingredients1"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:text="Ingredients"/>
+
+    <TextView
+        android:id="@+id/ingredients3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ingredients2"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:text="Ingredients"/>
+
+    <TextView
+        android:id="@+id/ingredients4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ingredients3"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:text="Ingredients"/>
+
+    <TextView
+        android:id="@+id/ingredients5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ingredients4"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:text="Ingredients"/>
+
+
+<TextView
+    android:id="@+id/measure1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/ingredients5"
+    android:layout_marginTop="3dp"
+    android:textColor="@color/white"
+    android:textSize="14dp"
+    android:text="Measurements"/>
+
+    <TextView
+        android:id="@+id/measure2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/measure1"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:text="Measurements"/>
+
+    <TextView
+        android:id="@+id/measure3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/measure2"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:text="Measurements"/>
+
+    <TextView
+        android:id="@+id/measure4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/measure3"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:text="Measurements"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/measure5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_below="@id/measure4"-->
+<!--        android:layout_marginTop="3dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="14dp"-->
+<!--        android:text="Measurements"/>-->
+
+
+
+</RelativeLayout>
