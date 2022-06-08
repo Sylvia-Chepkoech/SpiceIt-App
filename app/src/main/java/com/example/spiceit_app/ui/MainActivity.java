@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.example.spiceit_app.MealTypeAdapter;
+import com.example.spiceit_app.adapters.MealTypeAdapter;
 import com.example.spiceit_app.R;
 import com.example.spiceit_app.databinding.ActivityMainBinding;
 import com.example.spiceit_app.models.RandomCocktails;
