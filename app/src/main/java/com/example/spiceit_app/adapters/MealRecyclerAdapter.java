@@ -60,6 +60,7 @@ public class MealRecyclerAdapter extends RecyclerView.Adapter<MealRecyclerAdapte
         TextView cocktailAlcoholic;
         ImageView imageView;
         Context cont;
+        FirebaseReference ref;
 
 
         public MealViewHolder(@NonNull View itemView, Context sylvia) {
