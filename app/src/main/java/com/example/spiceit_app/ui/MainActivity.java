@@ -26,7 +26,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     ActivityMainBinding binding;
     List<Drink> allDrinks;
     RecyclerView.LayoutManager manager;
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+            binding.saveButton.setOnClickListener(this);
             Api client = ApiClient.getClient();
             Call<RandomCocktails> allCocktails = client.getCocktails('a');
 
@@ -73,8 +74,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
-
+    @Override
+    public void onClick(View v) {
+        if(v == binding.saveButton){
+            Intent intent = new Intent(MainActivity.this, FavoriteDrinkActivity.class);
+            startActivity(intent);
+        }
+    }
 }
