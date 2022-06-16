@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.spiceit_app.models.Drink;
 import com.example.spiceit_app.models.RandomCocktails;
 import com.example.spiceit_app.ui.CocktailDetailActivity;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 
@@ -60,7 +62,8 @@ public class MealRecyclerAdapter extends RecyclerView.Adapter<MealRecyclerAdapte
         TextView cocktailAlcoholic;
         ImageView imageView;
         Context cont;
-        FirebaseReference ref;
+        DatabaseReference ref;
+        Drink margarita;
 
 
         public MealViewHolder(@NonNull View itemView, Context sylvia) {
@@ -76,6 +79,8 @@ public class MealRecyclerAdapter extends RecyclerView.Adapter<MealRecyclerAdapte
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    ref = FirebaseDatabase.getInstance().getReference();
+
                     int position = getLayoutPosition();
                     Intent i = new Intent(cont, CocktailDetailActivity.class);
                     i.putExtra("position", position);
@@ -91,6 +96,7 @@ public class MealRecyclerAdapter extends RecyclerView.Adapter<MealRecyclerAdapte
             cocktailCategory.setText(cocktail.getStrCategory());
             cocktailAlcoholic.setText(cocktail.getStrAlcoholic());
             Picasso.get().load(cocktail.getStrDrinkThumb()).into(imageView);
+            margarita = cocktail;
 
 
         }
