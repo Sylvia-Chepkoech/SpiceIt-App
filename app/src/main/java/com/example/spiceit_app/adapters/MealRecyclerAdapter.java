@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.spiceit_app.models.Constants;
 import com.example.spiceit_app.models.Drink;
 import com.example.spiceit_app.models.RandomCocktails;
 import com.example.spiceit_app.ui.CocktailDetailActivity;
@@ -80,6 +81,7 @@ public class MealRecyclerAdapter extends RecyclerView.Adapter<MealRecyclerAdapte
                 @Override
                 public void onClick(View v) {
                     ref = FirebaseDatabase.getInstance().getReference();
+                    ref.child(Constants.DRINKS).child(margarita.getIdDrink()).setValue(margarita);
 
                     int position = getLayoutPosition();
                     Intent i = new Intent(cont, CocktailDetailActivity.class);
