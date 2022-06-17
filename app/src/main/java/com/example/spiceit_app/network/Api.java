@@ -10,7 +10,7 @@ import retrofit2.http.Query;
 public interface Api {
     @GET("search.php")
     Call<RandomCocktails> getCocktails(
-            @Query("f") char a
+            @Query("f") String a
 
     );
 

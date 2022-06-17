@@ -16,6 +16,9 @@
         android:theme="@style/Theme.SpiceItApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.FavoriteDrinkActivity"
             android:exported="false" />
         <activity
@@ -31,7 +34,7 @@
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Design.Light.NoActionBar" />
+            />
         <activity
             android:name=".ui.SplashScreen"
             android:exported="true">
